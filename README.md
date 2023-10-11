@@ -15,7 +15,7 @@ You can install `GPTChat` via [Swift Package Manager](https://swift.org/package-
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/[YourGitHubUsername]/GPTChat.git", from: "1.0.0"),
+    .package(url: "https://github.com/peerasak-u/GPTChat.git", from: "1.0.0"),
 ]
 ```
 
