@@ -1,0 +1,23 @@
+name: On Push Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Use Xcode 13
+        run: sudo xcode-select -switch /Applications/Xcode_13.app
+
+      - name: Build
+        run: swift build
+
+      - name: Run Tests
+        run: swift test
