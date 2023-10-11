@@ -40,7 +40,7 @@ import GPTChat
 ### Initialize the API Client
 
 ```swift
-let gptChatAPI = GPTChatAPI(apiKey: "YOUR_OPENAI_API_KEY")
+let gptChatAPI = GPTChatAPI(apiKey: "YOUR_OPENAI_API_KEY", model: "gpt-3.5-turbo")
 ```
 
 ### Making a Chat Request
