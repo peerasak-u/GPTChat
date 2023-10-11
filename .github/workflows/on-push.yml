@@ -7,14 +7,19 @@ on:
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Use Xcode 13
-        run: sudo xcode-select -switch /Applications/Xcode_13.app
+      - name: Install Swift
+        run: |
+          sudo apt-get update
+          sudo apt-get install clang libicu-dev
+          wget https://swift.org/builds/swift-5.5.2-release/ubuntu2004/swift-5.5.2-RELEASE/swift-5.5.2-RELEASE-ubuntu20.04.tar.gz
+          tar xzf swift-5.5.2-RELEASE-ubuntu20.04.tar.gz
+          export PATH=$(pwd)/swift-5.5.2-RELEASE-ubuntu20.04/usr/bin:"${PATH}"
 
       - name: Build
         run: swift build
