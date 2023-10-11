@@ -1,6 +1,6 @@
 # GPTChat
 
-A Swift Package for interacting with OpenAI's GPT models
+This package is a proof-of-concept project aimed at demonstrating the use of ChatGPT-4 to generate a Swift Package for interacting with OpenAI's GPT models
 
 ## Features
 - Asynchronous API calls using Swift's native `async/await`.
